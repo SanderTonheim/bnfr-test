@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 export default function Search() {
 	const searchClient = algoliasearch('BC0Z4HS7B1', 'efb4c3162db4848f35d83092db403111')
-	const Hit = ({ hit }) => <Link href={'/profile/' + hit.name.toLowerCase()}>{hit.name}</Link>
+	const Hit = ({ hit }) => <Link href={'/profile/' + hit.name.toLowerCase().toString().replace(/\s/g, "-")}>{hit.name}</Link>
 	const [value, setValue] = useState(null)
 	const handleChange = (e) => {
 		setValue(e.target.value)
