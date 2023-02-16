@@ -15,7 +15,7 @@ export default function handler({ data }) {
 	const algoliasearch = require('algoliasearch')
 
 	const client = algoliasearch('BC0Z4HS7B1', '285796df216a570721c98b33ba986821')
-	const index = client.initIndex('test_index')
+	const index = client.initIndex('Members')
 
 	data.map((item) => {
 		const record = { objectID: item._id, name: item.name }
