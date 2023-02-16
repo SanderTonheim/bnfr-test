@@ -22,7 +22,7 @@ export default function ProfilePage({ post }) {
 						src={icons.member.src}
 						alt='members icon'
 					/>
-					{post.name}
+					{/* {post.name} */}
 				</h1>
 				<div className={s.section_1}>
 					<p className={s.text}>{post.text}</p>
@@ -84,7 +84,7 @@ export async function getStaticProps(context) {
 	const post = await getClient().fetch(
 		groq`
 	  *[_type == "medlem" && slug.current == $slug][0]{
-  name, 
+   
   _id,
   logo,
 	location,
