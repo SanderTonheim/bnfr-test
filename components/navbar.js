@@ -56,7 +56,7 @@ export default function Navbar() {
 					</div>
 				</div>
 			</div>
-			<divs className={s.dropDownMenu}>{open ? <DropDownMenu /> : null}</divs>
+			<div className={s.dropDownMenu}>{open ? <DropDownMenu /> : null}</div>
 		</>
 	)
 }
