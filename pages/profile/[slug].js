@@ -84,7 +84,7 @@ export async function getStaticProps(context) {
 	const post = await getClient().fetch(
 		groq`
 	  *[_type == "medlem" && slug.current == $slug][0]{
-   
+   name,
   _id,
   logo,
 	location,
